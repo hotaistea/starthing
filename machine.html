@@ -1,0 +1,1428 @@
+
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StarThing Kazakhstan — Вендинговый бизнес под ключ | Гача, Хватайки, Протеин</title>
+<meta name="description" content="Запустите прибыльный вендинговый бизнес в Казахстане. Гача аппараты, хватайки, протеиновые автоматы с подключением Kaspi QR и гарантией 12 месяцев. Звоните: +7 706 688 10 39.">
+<meta name="keywords" content="купить вендинговый аппарат Казахстан, гача аппарат купить, бизнес под ключ вендинг, вендинг Алматы, хватайка автомат, протеиновый вендинг">
+<link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #070b14;
+  --card: rgba(255,255,255,0.05);
+  --primary: #6D5BFF;
+  --secondary: #00D4FF;
+  --text: #FFFFFF;
+  --text-muted: #9AA4B2;
+  --accent-pink: #FF5BBA;
+  --border: rgba(255,255,255,0.08);
+  --nav-bg: rgba(7,11,20,0.85);
+  --section-dark: #050810;
+}
+html.light {
+  --bg: #F0F2FF;
+  --card: rgba(109,91,255,0.06);
+  --text: #0D0F1A;
+  --text-muted: #5A6272;
+  --primary: #6D5BFF;
+  --secondary: #0099CC;
+  --border: rgba(109,91,255,0.15);
+  --nav-bg: rgba(240,242,255,0.9);
+  --section-dark: #E4E8FF;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:background .3s,color .3s;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3,h4,h5{font-family:'Manrope',sans-serif;}
+
+/* ── UTILS ─────────────────── */
+.grad-text{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.grad-text-anim{
+  background:linear-gradient(135deg,var(--primary),var(--secondary),var(--accent-pink),var(--primary));
+  background-size:300% 300%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:gradShift 4s ease infinite;
+}
+@keyframes gradShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;border:none;border-radius:50px;padding:13px 28px;
+  font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;cursor:pointer;
+  transition:transform .2s,box-shadow .2s;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(109,91,255,.45);}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:var(--text);border:1px solid var(--border);
+  border-radius:50px;padding:13px 28px;
+  font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;cursor:pointer;
+  transition:border-color .2s,transform .2s,background .2s;
+}
+.btn-outline:hover{border-color:var(--primary);background:rgba(109,91,255,.1);transform:translateY(-2px);}
+.section{padding:100px 0;position:relative;}
+.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+.section-badge{
+  display:inline-block;
+  background:rgba(109,91,255,.15);border:1px solid rgba(109,91,255,.3);
+  color:var(--primary);border-radius:50px;padding:6px 16px;
+  font-size:13px;font-weight:700;letter-spacing:.5px;margin-bottom:20px;
+}
+.section-title{font-size:42px;font-weight:800;line-height:1.2;margin-bottom:16px;}
+.section-sub{font-size:17px;color:var(--text-muted);line-height:1.7;max-width:600px;}
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s;}
+.fade-in.visible{opacity:1;transform:none;}
+
+/* ── NAVBAR ─────────────────── */
+#navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:70px;display:flex;align-items:center;
+  background:var(--nav-bg);backdrop-filter:blur(20px);
+  border-bottom:1px solid transparent;transition:border-color .3s,backdrop-filter .3s,background .3s;
+}
+#navbar.scrolled{border-bottom-color:var(--border);backdrop-filter:blur(30px);}
+.nav-inner{
+  max-width:1260px;margin:0 auto;padding:0 24px;
+  width:100%;display:flex;align-items:center;gap:0;
+}
+.nav-logo{
+  display:flex;align-items:center;gap:10px;
+  font-family:'Manrope',sans-serif;font-weight:800;font-size:20px;
+  flex-shrink:0;margin-right:40px;
+}
+.nav-links{display:flex;align-items:center;gap:28px;flex:1;}
+.nav-links a{font-size:14px;font-weight:600;color:var(--text-muted);transition:color .2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.lang-btns{display:flex;gap:4px;}
+.lang-btn{
+  background:transparent;border:1px solid transparent;color:var(--text-muted);
+  font-size:12px;font-weight:700;padding:4px 8px;border-radius:6px;cursor:pointer;
+  transition:all .2s;font-family:'Manrope',sans-serif;
+}
+.lang-btn.active,.lang-btn:hover{color:var(--primary);border-color:var(--primary);}
+.theme-btn{
+  background:transparent;border:1px solid var(--border);color:var(--text);
+  width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:16px;
+  display:flex;align-items:center;justify-content:center;transition:all .2s;
+}
+.theme-btn:hover{border-color:var(--primary);}
+.burger{
+  display:none;flex-direction:column;gap:5px;cursor:pointer;
+  background:none;border:none;padding:4px;
+}
+.burger span{
+  display:block;width:24px;height:2px;background:var(--text);
+  border-radius:2px;transition:all .3s;
+}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.burger.open span:nth-child(2){opacity:0;}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* Mobile nav */
+#mobile-nav{
+  display:none;position:fixed;top:70px;left:0;right:0;bottom:0;z-index:999;
+  background:var(--bg);padding:24px;overflow-y:auto;
+  flex-direction:column;gap:16px;
+}
+#mobile-nav.open{display:flex;}
+#mobile-nav a{font-size:18px;font-weight:600;padding:12px 0;border-bottom:1px solid var(--border);}
+
+/* ── HERO ─────────────────── */
+#hero{
+  min-height:100vh;padding:130px 0 80px;
+  position:relative;overflow:hidden;
+}
+.hero-orb{
+  position:absolute;border-radius:50%;filter:blur(100px);
+  pointer-events:none;will-change:transform;
+}
+.hero-orb-1{width:500px;height:500px;background:rgba(109,91,255,.35);top:-100px;left:-100px;animation:floatOrb 8s ease-in-out infinite;}
+.hero-orb-2{width:400px;height:400px;background:rgba(0,212,255,.25);bottom:-50px;right:-50px;animation:floatOrb 10s ease-in-out infinite reverse;}
+.hero-orb-3{width:300px;height:300px;background:rgba(255,91,186,.15);top:40%;left:40%;animation:floatOrb 12s ease-in-out infinite 2s;}
+@keyframes floatOrb{0%,100%{transform:translate(0,0);}50%{transform:translate(30px,-30px);}}
+.dot-pattern{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1' fill='rgba(255,255,255,0.12)'/%3E%3C/svg%3E");
+  pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:55% 45%;gap:60px;align-items:center;position:relative;z-index:1;}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(109,91,255,.15);border:1px solid rgba(109,91,255,.4);
+  color:var(--primary);border-radius:50px;padding:8px 18px;
+  font-size:13px;font-weight:700;margin-bottom:28px;
+}
+.hero-title{
+  font-size:56px;font-weight:900;line-height:1.1;margin-bottom:24px;
+}
+.hero-sub{font-size:17px;color:var(--text-muted);line-height:1.7;max-width:520px;margin-bottom:36px;}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px;}
+.hero-mini-badges{display:flex;gap:20px;flex-wrap:wrap;}
+.mini-badge{
+  display:flex;align-items:center;gap:8px;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:50px;padding:8px 16px;font-size:13px;font-weight:600;
+}
+
+/* Hero Visual */
+.hero-visual{position:relative;height:480px;}
+.machines-group{
+  position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+  display:flex;align-items:flex-end;gap:16px;
+}
+/* Glow ring */
+.neon-ring{
+  position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);
+  width:320px;height:40px;
+  background:radial-gradient(ellipse,rgba(109,91,255,.6) 0%,transparent 70%);
+  border-radius:50%;animation:pulse-ring 2s ease-in-out infinite;
+}
+@keyframes pulse-ring{0%,100%{opacity:.6;transform:translateX(-50%) scaleX(1);}50%{opacity:1;transform:translateX(-50%) scaleX(1.15);}}
+/* Float cards */
+.float-card{
+  position:absolute;
+  background:rgba(15,20,40,.85);backdrop-filter:blur(16px);
+  border:1px solid var(--border);border-radius:16px;padding:14px 18px;
+  animation:floatCard 3s ease-in-out infinite;
+}
+.float-card-phone{top:30px;left:-10px;animation-delay:0s;}
+.float-card-kaspi{top:20px;right:0;animation-delay:1.5s;}
+@keyframes floatCard{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.float-income{font-family:'Manrope',sans-serif;font-size:20px;font-weight:800;}
+.float-stats{display:flex;gap:16px;margin-top:6px;}
+.float-stat{font-size:11px;color:var(--text-muted);}
+.float-stat span{display:block;font-size:14px;font-weight:700;color:var(--text);}
+.kaspi-card{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;}
+
+/* ── WHY ─────────────────── */
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px;}
+.feat-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:20px;padding:28px;
+  transition:transform .3s,border-color .3s,box-shadow .3s;
+}
+.feat-card:hover{transform:translateY(-4px);border-color:rgba(109,91,255,.4);box-shadow:0 12px 40px rgba(109,91,255,.15);}
+.feat-icon{font-size:32px;margin-bottom:16px;}
+.feat-title{font-family:'Manrope',sans-serif;font-size:17px;font-weight:700;margin-bottom:8px;}
+.feat-desc{font-size:14px;color:var(--text-muted);line-height:1.6;}
+
+/* ── CATALOG ─────────────────── */
+.filter-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:32px 0;}
+.filter-tab{
+  background:var(--card);border:1px solid var(--border);
+  color:var(--text-muted);border-radius:50px;padding:9px 20px;
+  font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;
+}
+.filter-tab.active{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;border-color:transparent;
+}
+.catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.cat-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:20px;overflow:hidden;
+  transition:transform .3s,box-shadow .3s;
+}
+.cat-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(109,91,255,.15);}
+.cat-card[data-category]{display:flex;flex-direction:column;}
+.cat-img{height:180px;display:flex;align-items:center;justify-content:center;background:rgba(109,91,255,.06);}
+.cat-body{padding:20px;}
+.cat-name{font-family:'Manrope',sans-serif;font-size:18px;font-weight:800;margin-bottom:4px;}
+.cat-models{font-size:12px;color:var(--primary);font-weight:600;margin-bottom:10px;}
+.cat-desc{font-size:13px;color:var(--text-muted);margin-bottom:16px;line-height:1.5;}
+.catalog-cta{text-align:center;margin-top:48px;}
+
+/* ── TIMELINE ─────────────────── */
+.timeline{display:flex;gap:0;position:relative;margin-top:60px;justify-content:center;}
+.timeline::before{
+  content:'';position:absolute;top:36px;left:10%;right:10%;height:2px;
+  background:linear-gradient(90deg,var(--primary),var(--secondary),var(--primary));
+  background-size:200%;animation:gradShift 4s linear infinite;
+}
+.step{flex:1;text-align:center;position:relative;padding:0 12px;}
+.step-num{
+  width:72px;height:72px;border-radius:50%;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Manrope',sans-serif;font-size:20px;font-weight:900;
+  margin:0 auto 20px;position:relative;z-index:1;
+  box-shadow:0 0 24px rgba(109,91,255,.5);
+  transition:transform .3s,box-shadow .3s;
+}
+.step:hover .step-num{transform:scale(1.1);box-shadow:0 0 40px rgba(109,91,255,.7);}
+.step-title{font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;margin-bottom:8px;}
+.step-desc{font-size:13px;color:var(--text-muted);line-height:1.5;}
+
+/* ── APP ─────────────────── */
+.app-section{background:var(--section-dark);}
+.app-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.app-features{list-style:none;margin:24px 0 32px;}
+.app-features li{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 0;border-bottom:1px solid var(--border);
+  font-size:15px;font-weight:500;
+}
+.app-features li::before{
+  content:'✓';
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  font-weight:900;font-size:16px;flex-shrink:0;
+}
+.store-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.store-btn{
+  display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.05);border:1px solid var(--border);
+  border-radius:14px;padding:12px 20px;transition:all .2s;cursor:pointer;
+}
+.store-btn:hover{border-color:var(--primary);background:rgba(109,91,255,.1);}
+.store-btn svg{flex-shrink:0;}
+.store-btn-text{text-align:left;}
+.store-btn-text small{display:block;font-size:10px;color:var(--text-muted);}
+.store-btn-text strong{font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;}
+
+.phones-wrap{position:relative;height:440px;display:flex;align-items:center;justify-content:center;}
+.phone-float-badge{
+  position:absolute;top:40px;right:0;
+  background:rgba(0,212,255,.15);border:1px solid rgba(0,212,255,.3);
+  color:var(--secondary);border-radius:12px;padding:10px 16px;
+  font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;
+  animation:floatCard 3s ease-in-out infinite 1s;
+}
+
+/* ── EARN ─────────────────── */
+.earn-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:60px;align-items:start;}
+.earn-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:24px;padding:32px;
+}
+.earn-badge{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;border-radius:50px;padding:6px 16px;
+  font-size:13px;font-weight:700;margin-bottom:24px;
+}
+.earn-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 0;border-bottom:1px solid var(--border);
+  font-size:15px;
+}
+.earn-row:last-child{border-bottom:none;}
+.earn-label{color:var(--text-muted);}
+.earn-value{font-family:'Manrope',sans-serif;font-weight:700;font-size:16px;}
+.earn-value.green{color:#00d68f;}
+.chart-wrap{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:24px;}
+.chart-title{font-family:'Manrope',sans-serif;font-weight:700;font-size:16px;margin-bottom:20px;}
+.earn-disclaimer{text-align:center;font-size:13px;color:var(--text-muted);margin-top:24px;}
+
+/* ── COUNTERS ─────────────────── */
+.counters-section{
+  background:linear-gradient(135deg,rgba(109,91,255,.1),rgba(0,212,255,.05));
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+.counters-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.counter-card{
+  text-align:center;padding:40px 20px;
+}
+.counter-num{
+  font-family:'Manrope',sans-serif;font-size:52px;font-weight:900;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1;margin-bottom:8px;
+}
+.counter-label{font-size:15px;color:var(--text-muted);font-weight:500;}
+
+/* ── REVIEWS ─────────────────── */
+.slider-wrap{position:relative;overflow:hidden;margin-top:48px;}
+.slider-track{
+  display:flex;gap:24px;
+  overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;-ms-overflow-style:none;
+  padding-bottom:8px;
+}
+.slider-track::-webkit-scrollbar{display:none;}
+.review-card{
+  min-width:360px;flex-shrink:0;scroll-snap-align:start;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:20px;padding:28px;
+}
+.review-place{font-family:'Manrope',sans-serif;font-size:16px;font-weight:800;margin-bottom:4px;}
+.review-city{font-size:13px;color:var(--text-muted);margin-bottom:12px;}
+.stars{color:#FFD700;font-size:16px;margin-bottom:16px;}
+.review-text{font-size:14px;color:var(--text-muted);line-height:1.6;margin-bottom:16px;}
+.review-profit{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(0,214,143,.1);border-radius:12px;padding:10px 14px;
+  font-size:14px;font-weight:700;color:#00d68f;
+}
+.slider-arrows{display:flex;gap:10px;margin-top:24px;justify-content:center;}
+.arrow-btn{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--card);border:1px solid var(--border);
+  color:var(--text);font-size:18px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .2s;
+}
+.arrow-btn:hover{border-color:var(--primary);background:rgba(109,91,255,.15);}
+.reviews-cta{text-align:center;margin-top:32px;}
+
+/* ── FAQ ─────────────────── */
+.faq-list{max-width:760px;margin:48px auto 0;}
+.faq-item{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:16px;margin-bottom:12px;overflow:hidden;
+}
+.faq-q{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:22px 24px;cursor:pointer;font-family:'Manrope',sans-serif;
+  font-weight:700;font-size:16px;
+  transition:background .2s;
+}
+.faq-q:hover{background:rgba(109,91,255,.05);}
+.faq-icon{
+  width:28px;height:28px;border-radius:50%;
+  background:rgba(109,91,255,.2);border:1px solid rgba(109,91,255,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;transition:transform .3s;color:var(--primary);
+}
+.faq-item.active .faq-icon{transform:rotate(45deg);}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .4s ease;
+}
+.faq-item.active .faq-a{max-height:200px;}
+.faq-a-inner{padding:0 24px 22px;font-size:15px;color:var(--text-muted);line-height:1.7;}
+
+/* ── CTA ─────────────────── */
+#cta{
+  
+  position:relative;overflow:hidden;
+}
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.cta-title{font-size:42px;font-weight:900;line-height:1.2;margin-bottom:16px;}
+.cta-sub{font-size:16px;color:var(--text-muted);line-height:1.7;margin-bottom:36px;}
+.cta-btns{display:flex;gap:16px;flex-wrap:wrap;}
+.notif-card{
+  background:rgba(15,25,50,.85);backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.1);border-radius:14px;
+  padding:14px 18px;position:absolute;
+  display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;
+  animation:floatCard 3s ease-in-out infinite;
+}
+.notif-card-1{top:50px;right:20px;}
+.notif-card-2{bottom:80px;right:40px;animation-delay:1.5s;}
+.notif-dot{width:8px;height:8px;border-radius:50%;background:#00d68f;flex-shrink:0;}
+
+/* ── FOOTER ─────────────────── */
+footer{
+  background:var(--section-dark);
+  border-top:1px solid var(--border);padding:60px 0 32px;
+}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:48px;}
+.footer-brand{font-family:'Manrope',sans-serif;font-size:14px;color:var(--text-muted);line-height:1.7;margin-top:16px;}
+.footer-col-title{font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;margin-bottom:20px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-size:14px;color:var(--text-muted);transition:color .2s;}
+.footer-links a:hover{color:var(--primary);}
+.footer-contact{font-size:14px;color:var(--text-muted);display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.socials{display:flex;gap:10px;margin-top:20px;}
+.social-btn{
+  width:38px;height:38px;border-radius:50%;
+  background:var(--card);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;transition:all .2s;cursor:pointer;
+}
+.social-btn:hover{border-color:var(--primary);background:rgba(109,91,255,.15);}
+.footer-bottom{
+  border-top:1px solid var(--border);padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:13px;color:var(--text-muted);flex-wrap:wrap;gap:12px;
+}
+.main-img {
+    width: 500px;
+}
+/* ── RESPONSIVE ─────────────────── */
+@media(max-width:1199px){
+  .hero-title{font-size:44px;}
+  .section-title{font-size:34px;}
+  .cards-grid{grid-template-columns:repeat(2,1fr);}
+  .catalog-grid{grid-template-columns:repeat(2,1fr);}
+  .counters-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .timeline::before{display:none;}
+  .timeline{flex-wrap:wrap;}
+  .step{min-width:45%;}
+    .main-img {
+    width: 400px;
+}
+}
+@media(max-width:767px){
+  #navbar .nav-links,#navbar .nav-right .btn-primary,#navbar .lang-btns{display:none;}
+  .burger{display:flex;}
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-visual{height:320px;order:-1;}
+  .hero-title{font-size:36px;}
+  .section-title{font-size:28px;}
+  .section{padding:70px 0;}
+  .cards-grid{grid-template-columns:1fr;}
+  .catalog-grid{grid-template-columns:1fr;}
+  .app-grid{grid-template-columns:1fr;}
+  .earn-grid{grid-template-columns:1fr;}
+  .counters-grid{grid-template-columns:repeat(2,1fr);}
+  .cta-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .btn-primary,.btn-outline{width:100%;justify-content:center;}
+  .hero-btns{flex-direction:column;}
+  .cta-btns{flex-direction:column;}
+  .timeline{flex-direction:column;}
+  .step{min-width:100%;text-align:left;display:flex;gap:16px;align-items:flex-start;}
+  .step-num{width:52px;height:52px;font-size:16px;flex-shrink:0;margin:0;}
+  .main-img {
+    width: 320px;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar">
+  <nav class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <img src="./img/logo.png" alt="" width="45px">
+      <span>StarThing</span>
+    </a>
+    <div class="nav-links">
+      <a href="#hero" data-i18n="nav_home">Главная</a>
+      <a href="#catalog" data-i18n="nav_catalog">Каталог</a>
+      <a href="#app" data-i18n="nav_app">Приложение</a>
+      <a href="#about" data-i18n="nav_about">О компании</a>
+      <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-btns">
+        <button class="lang-btn active" onclick="setLang('ru')">RU</button>
+        <button class="lang-btn" onclick="setLang('kz')">KZ</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
+      <a href="https://wa.me/77066881039" class="btn-primary" style="padding:10px 20px;font-size:14px;" data-i18n="btn_consult">Получить консультацию</a>
+    </div>
+    <button class="burger" id="burger" onclick="toggleBurger()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- MOBILE NAV -->
+<div id="mobile-nav">
+  <a href="#hero" onclick="closeBurger()" data-i18n="nav_home">Главная</a>
+  <a href="#catalog" onclick="closeBurger()" data-i18n="nav_catalog">Каталог</a>
+  <a href="#app" onclick="closeBurger()" data-i18n="nav_app">Приложение</a>
+  <a href="#about" onclick="closeBurger()" data-i18n="nav_about">О компании</a>
+  <a href="#contacts" onclick="closeBurger()" data-i18n="nav_contacts">Контакты</a>
+  <div style="display:flex;gap:8px;padding-top:8px;">
+    <button class="lang-btn" onclick="setLang('ru')">RU</button>
+    <button class="lang-btn" onclick="setLang('kz')">KZ</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+  </div>
+  <a href="https://wa.me/77066881039" class="btn-primary" style="margin-top:12px;" data-i18n="btn_consult">Получить консультацию</a>
+</div>
+
+<main>
+
+<!-- ── 1. HERO ── -->
+<section id="hero" class="section" style="padding-top:130px;padding-bottom:80px;">
+  <div class="dot-pattern"></div>
+  <div class="hero-orb hero-orb-1" id="orb1"></div>
+  <div class="hero-orb hero-orb-2" id="orb2"></div>
+  <div class="hero-orb hero-orb-3" id="orb3"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="fade-in">
+        <div class="hero-badge">⚡ <span data-i18n="hero_badge">Вендинговый бизнес под ключ</span></div>
+        <h1 class="hero-title">
+          <span data-i18n="hero_title_1">Запустите </span><span class="grad-text-anim" data-i18n="hero_title_grad">прибыльный</span><span data-i18n="hero_title_2"> вендинговый бизнес вместе со </span><span class="grad-text" data-i18n="hero_title_brand">StarThing</span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero_sub">Мы не просто продаем аппараты. Мы запускаем готовый бизнес под ключ: подключаем Kaspi QR, настраиваем приложение StarThing, предоставляем гарантию 12 месяцев и сопровождаем вас на каждом этапе.</p>
+        <div class="hero-btns">
+          <a href="#catalog" class="btn-primary" data-i18n="btn_catalog">Смотреть каталог →</a>
+          <a href="https://wa.me/77066881039" class="btn-outline" data-i18n="btn_consult">Получить консультацию</a>
+        </div>
+        <div class="hero-mini-badges">
+          <div class="mini-badge">📱 <span data-i18n="badge_kaspi">Подключение Kaspi QR</span></div>
+          <div class="mini-badge">📊 <span data-i18n="badge_app">Управление через приложение</span></div>
+          <div class="mini-badge">🛡 <span data-i18n="badge_warranty">Гарантия 12 месяцев</span></div>
+        </div>
+      </div>
+      <div class="hero-visual fade-in" style="transition-delay:.2s">
+        <!-- Float card phone -->
+        <div class="float-card float-card-phone">
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">StarThing</div>
+          <div class="float-income grad-text">124 580 ₸</div>
+          <div class="float-stats">
+            <div class="float-stat"><span>83</span>Продажи</div>
+            <div class="float-stat"><span>17</span>Аппаратов</div>
+          </div>
+        </div>
+        <!-- Float card Kaspi -->
+        <div class="float-card float-card-kaspi">
+          <div class="kaspi-card">
+            <img src="./img/Kaspi.jpg" alt="" width="50px">
+            QR оплата
+          </div>
+        </div>
+        <!-- Machines SVG group -->
+        <div class="machines-group">
+          <!-- Gacha machine -->
+          <img class="main-img" src="./img/machines.PNG" alt="">
+        </div>
+        <div class="neon-ring"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 2. WHY STARTHING ── -->
+<section id="about" class="section fade-in">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:0;">
+      <div class="section-badge" data-i18n="section_why">Почему StarThing</div>
+      <h2 class="section-title" data-i18n="why_title">Всё необходимое для запуска бизнеса</h2>
+      <p class="section-sub" style="margin:0 auto;" data-i18n="why_sub">Мы предоставляем полный пакет услуг для успешного старта и развития вашего вендингового бизнеса.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="feat-card fade-in"><div class="feat-icon">🚀</div><div class="feat-title" data-i18n="f1_title">Готовый бизнес под ключ</div><p class="feat-desc" data-i18n="f1_desc">Подбираем оборудование, помогаем с размещением и запускаем проект с нуля до первой прибыли.</p></div>
+      <div class="feat-card fade-in" style="transition-delay:.1s"><div class="feat-icon">📱</div><div class="feat-title" data-i18n="f2_title">Подключение Kaspi QR</div><p class="feat-desc" data-i18n="f2_desc">Все аппараты работают с современной системой безналичной оплаты — удобно для клиентов.</p></div>
+      <div class="feat-card fade-in" style="transition-delay:.2s"><div class="feat-icon">📊</div><div class="feat-title" data-i18n="f3_title">Управление через приложение</div><p class="feat-desc" data-i18n="f3_desc">Контролируйте бизнес из любой точки мира: статистика, выручка, остатки — всё в телефоне.</p></div>
+      <div class="feat-card fade-in" style="transition-delay:.3s"><div class="feat-icon">🛡</div><div class="feat-title" data-i18n="f4_title">Гарантия 12 месяцев</div><p class="feat-desc" data-i18n="f4_desc">Надёжная техническая поддержка и сервисное обслуживание в течение всего гарантийного срока.</p></div>
+      <div class="feat-card fade-in" style="transition-delay:.4s"><div class="feat-icon">🔧</div><div class="feat-title" data-i18n="f5_title">Монтаж и запуск</div><p class="feat-desc" data-i18n="f5_desc">Доставка, установка и полная настройка оборудования — вам остаётся только считать прибыль.</p></div>
+      <div class="feat-card fade-in" style="transition-delay:.5s"><div class="feat-icon">💬</div><div class="feat-title" data-i18n="f6_title">Поддержка 24/7</div><p class="feat-desc" data-i18n="f6_desc">Всегда готовы помочь по любым вопросам — техническим, коммерческим или организационным.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 3. CATALOG ── -->
+<section id="catalog" class="section" style="background:var(--section-dark);">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-badge" data-i18n="section_catalog">Каталог вендинговых аппаратов</div>
+      <h2 class="section-title" data-i18n="catalog_title">Каталог вендинговых аппаратов</h2>
+      <p class="section-sub" data-i18n="catalog_sub">Выберите направление бизнеса</p>
+    </div>
+    <div class="filter-tabs fade-in">
+      <button class="filter-tab active" onclick="filterCatalog('all')" data-i18n="f_all">Все</button>
+      <button class="filter-tab" onclick="filterCatalog('gacha')" data-i18n="f_gacha">Гача</button>
+      <button class="filter-tab" onclick="filterCatalog('claw')" data-i18n="f_claw">Хватайки</button>
+      <button class="filter-tab" onclick="filterCatalog('protein')" data-i18n="f_protein">Протеиновые</button>
+      <button class="filter-tab" onclick="filterCatalog('tshirt')" data-i18n="f_tshirt">Футболки</button>
+      <button class="filter-tab" onclick="filterCatalog('photo')" data-i18n="f_photo">Фото и документы</button>
+      <button class="filter-tab" onclick="filterCatalog('massage')" data-i18n="f_massage">Массаж</button>
+    </div>
+    <div class="catalog-grid" id="catalogGrid">
+      <!-- Gacha -->
+      <div class="cat-card fade-in" data-category="gacha">
+        <img src="./img/gacha.jpg" alt="">
+        <div class="cat-body">
+          <div class="cat-name" data-i18n="cat_gacha_name">🎁 Гача аппараты</div>
+          <div class="cat-models" data-i18n="cat_gacha_models">6 моделей</div>
+          <p class="cat-desc" data-i18n="cat_gacha_desc">Популярное решение для ТРЦ, парков развлечений и семейных комплексов. Высокая проходимость, низкая стоимость наполнения.</p>
+          <a href="https://wa.me/77066881039" class="btn-outline" style="font-size:14px;padding:10px 20px;" data-i18n="btn_view">Смотреть</a>
+        </div>
+      </div>
+      <!-- Claw -->
+      <div class="cat-card fade-in" data-category="claw" style="transition-delay:.1s">
+        <img src="./img/hvaika.jpg" alt="">
+        <div class="cat-body">
+          <div class="cat-name" data-i18n="cat_claw_name">🧸 Хватайки</div>
+          <div class="cat-models" data-i18n="cat_claw_models">4 модели</div>
+          <p class="cat-desc" data-i18n="cat_claw_desc">Классические автоматы с игрушками, которые привлекают детей и взрослых. Claw Mini, Standard, XL и Mega.</p>
+          <a href="https://wa.me/77066881039" class="btn-outline" style="font-size:14px;padding:10px 20px;" data-i18n="btn_view">Смотреть</a>
+        </div>
+      </div>
+      <!-- Protein -->
+      <div class="cat-card fade-in" data-category="protein" style="transition-delay:.2s">
+        <img src="./img/protein.jpg" alt="">
+        <div class="cat-body">
+          <div class="cat-name" data-i18n="cat_protein_name">💪 Протеиновые автоматы</div>
+          <div class="cat-models" data-i18n="cat_protein_models">2 модели</div>
+          <p class="cat-desc" data-i18n="cat_protein_desc">Идеально подходят для фитнес-клубов, спортивных центров и залов. Protein Basic и Protein Pro.</p>
+          <a href="https://wa.me/77066881039" class="btn-outline" style="font-size:14px;padding:10px 20px;" data-i18n="btn_view">Смотреть</a>
+        </div>
+      </div>
+      <!-- T-shirt -->
+      <div class="cat-card fade-in" data-category="tshirt" style="transition-delay:.3s">
+        <img src="./img/t-shirt.jpg" alt="">
+        <div class="cat-body">
+          <div class="cat-name" data-i18n="cat_tshirt_name">👕 Принтер футболок</div>
+          <div class="cat-models" data-i18n="cat_tshirt_models">1 модель</div>
+          <p class="cat-desc" data-i18n="cat_tshirt_desc">Печать принтов на футболках прямо на месте по заказу клиента. Уникальный аттракцион в ТРЦ.</p>
+          <a href="https://wa.me/77066881039" class="btn-outline" style="font-size:14px;padding:10px 20px;" data-i18n="btn_view">Смотреть</a>
+        </div>
+      </div>
+      <!-- Photo -->
+      <div class="cat-card fade-in" data-category="photo" style="transition-delay:.4s">
+        <img src="./img/print.jpg" alt="">
+        <div class="cat-body">
+          <div class="cat-name" data-i18n="cat_photo_name">🖨️ Фото и документы</div>
+          <div class="cat-models" data-i18n="cat_photo_models">1 модель</div>
+          <p class="cat-desc" data-i18n="cat_photo_desc">Автоматическая печать документов и фотографий без участия персонала. Востребовано везде.</p>
+          <a href="https://wa.me/77066881039" class="btn-outline" style="font-size:14px;padding:10px 20px;" data-i18n="btn_view">Смотреть</a>
+        </div>
+      </div>
+      <!-- Massage -->
+      <div class="cat-card fade-in" data-category="massage" style="transition-delay:.5s">
+        <img src="./img/massage.jpg" alt="">
+        <div class="cat-body">
+          <div class="cat-name" data-i18n="cat_massage_name">💺 Массажные кресла</div>
+          <div class="cat-models" data-i18n="cat_massage_models">2 модели</div>
+          <p class="cat-desc" data-i18n="cat_massage_desc">Пассивный доход в ТРЦ, аэропортах и бизнес-центрах. Высокий средний чек и стабильный спрос.</p>
+          <a href="https://wa.me/77066881039" class="btn-outline" style="font-size:14px;padding:10px 20px;" data-i18n="btn_view">Смотреть</a>
+        </div>
+      </div>
+    </div>
+    <div class="catalog-cta fade-in">
+      <a href="https://wa.me/77066881039" class="btn-primary" style="font-size:16px;padding:16px 36px;" data-i18n="btn_all_cats">Смотреть все категории</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── 4. HOW WE WORK ── -->
+<section id="how" class="section fade-in">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-badge" data-i18n="section_how">Как мы запускаем ваш бизнес</div>
+      <h2 class="section-title" data-i18n="how_title">Как мы запускаем ваш бизнес</h2>
+    </div>
+    <div class="timeline">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title" data-i18n="step1_title">Выбираете аппарат</div>
+        <p class="step-desc" data-i18n="step1_desc">Наши специалисты помогают подобрать модель под цели и бюджет.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title" data-i18n="step2_title">Заключаем договор</div>
+        <p class="step-desc" data-i18n="step2_desc">Согласовываем комплектацию и условия поставки.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title" data-i18n="step3_title">Подключаем Kaspi QR</div>
+        <p class="step-desc" data-i18n="step3_desc">Настраиваем приём платежей — быстро и без сложностей.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-title" data-i18n="step4_title">Подключаем приложение</div>
+        <p class="step-desc" data-i18n="step4_desc">Получаете полный контроль над оборудованием онлайн.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-title" data-i18n="step5_title">Начинаете зарабатывать</div>
+        <p class="step-desc" data-i18n="step5_desc">Следите за показателями и получайте прибыль каждый день.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. APP ── -->
+<section id="app" class="section app-section fade-in">
+  <div class="container">
+    <div class="app-grid">
+      <div>
+        <div class="section-badge" data-i18n="section_app">Мобильное приложение</div>
+        <h2 class="section-title">Управляйте бизнесом из <span class="grad-text" data-i18n="app_title_grad">любой точки</span> <span data-i18n="app_title_2">мира</span></h2>
+        <ul class="app-features">
+          <li data-i18n="app_f1">Онлайн статистика продаж</li>
+          <li data-i18n="app_f2">Контроль выручки в реальном времени</li>
+          <li data-i18n="app_f3">Мониторинг остатков товаров</li>
+          <li data-i18n="app_f4">Уведомления о событиях</li>
+          <li data-i18n="app_f5">Управление несколькими аппаратами</li>
+          <li data-i18n="app_f6">Аналитика и отчёты</li>
+          <li data-i18n="app_f7">Контроль работы оборудования</li>
+          <li data-i18n="app_f8">История операций</li>
+        </ul>
+        <div class="store-btns">
+          <a href="#" class="store-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="white"/></svg>
+            <div class="store-btn-text"><small data-i18n="store_dl">Загрузить в</small><strong>App Store</strong></div>
+          </a>
+          <a href="#" class="store-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3.18 23.76c.3.18.67.19.99.03l11.62-6.53-2.5-2.5-10.11 9zm16.91-10.13c.42-.28.67-.74.67-1.24s-.25-.96-.66-1.24l-2.34-1.32L14.9 12l2.87 2.87 2.32-1.24zM2.01 1.08C1.96 1.24 1.94 1.41 1.94 1.59v20.82c0 .18.02.35.07.51L13.24 12 2.01 1.08zm11.8 10.23L3.18.24C2.86.08 2.49.09 2.19.27L13.81 12l0 0z" fill="white"/></svg>
+            <div class="store-btn-text"><small data-i18n="store_avail">Доступно в</small><strong>Google Play</strong></div>
+          </a>
+        </div>
+      </div>
+      <div class="phones-wrap">
+        <div class="phone-float-badge">📈 +18.7% <span data-i18n="app_month">за месяц</span></div>
+        <!-- Phone 1 -->
+        <svg style="position:absolute;left:20px;top:20px;" width="160" height="320" viewBox="0 0 160 320" fill="none">
+          <rect x="4" y="4" width="152" height="312" rx="28" fill="#0D0F1A" stroke="rgba(109,91,255,0.6)" stroke-width="2"/>
+          <rect x="12" y="16" width="136" height="288" rx="22" fill="#111827"/>
+          <rect x="55" y="8" width="50" height="8" rx="4" fill="#1a1a2e"/>
+          <text x="80" y="50" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.5)" font-family="sans-serif">StarThing</text>
+          <text x="80" y="72" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="sans-serif">Доход сегодня</text>
+          <text x="80" y="94" text-anchor="middle" font-size="18" fill="url(#pg1)" font-family="sans-serif" font-weight="700">124 580 ₸</text>
+          <defs><linearGradient id="pg1" x1="0" y1="0" x2="160" y2="0"><stop offset="0%" stop-color="#6D5BFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs>
+          <rect x="20" y="105" width="52" height="44" rx="10" fill="rgba(109,91,255,0.2)" stroke="rgba(109,91,255,0.3)" stroke-width="1"/>
+          <text x="46" y="124" text-anchor="middle" font-size="16" fill="white" font-weight="700">83</text>
+          <text x="46" y="138" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.5)">Продажи</text>
+          <rect x="88" y="105" width="52" height="44" rx="10" fill="rgba(0,212,255,0.2)" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
+          <text x="114" y="124" text-anchor="middle" font-size="16" fill="white" font-weight="700">17</text>
+          <text x="114" y="138" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.5)">Аппаратов</text>
+          <polyline points="20,200 40,185 60,195 80,165 100,170 120,150 140,158" stroke="url(#pg1)" stroke-width="2" fill="none"/>
+          <polyline points="20,200 40,185 60,195 80,165 100,170 120,150 140,158 140,200 20,200" fill="rgba(109,91,255,0.15)"/>
+        </svg>
+        <!-- Phone 2 -->
+        <svg style="position:absolute;right:20px;bottom:10px;" width="150" height="300" viewBox="0 0 150 300" fill="none">
+          <rect x="4" y="4" width="142" height="292" rx="26" fill="#0D0F1A" stroke="rgba(0,212,255,0.6)" stroke-width="2"/>
+          <rect x="12" y="16" width="126" height="268" rx="20" fill="#111827"/>
+          <rect x="50" y="8" width="50" height="8" rx="4" fill="#1a1a2e"/>
+          <text x="75" y="46" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.5)">Аппараты</text>
+          <rect x="16" y="56" width="118" height="34" rx="8" fill="rgba(109,91,255,0.2)" stroke="rgba(109,91,255,0.3)" stroke-width="1"/>
+          <text x="75" y="70" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.8)">ТРЦ Mega Center</text>
+          <text x="75" y="82" text-anchor="middle" font-size="8" fill="rgba(0,212,255,0.7)">● Онлайн</text>
+          <rect x="16" y="96" width="118" height="34" rx="8" fill="rgba(255,91,186,0.1)" stroke="rgba(255,91,186,0.2)" stroke-width="1"/>
+          <text x="75" y="110" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.8)">Forum Almaty</text>
+          <text x="75" y="122" text-anchor="middle" font-size="8" fill="rgba(0,212,255,0.7)">● Онлайн</text>
+          <rect x="16" y="136" width="118" height="34" rx="8" fill="rgba(0,212,255,0.1)" stroke="rgba(0,212,255,0.2)" stroke-width="1"/>
+          <text x="75" y="150" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.8)">Asia Park</text>
+          <text x="75" y="162" text-anchor="middle" font-size="8" fill="rgba(0,212,255,0.7)">● Онлайн</text>
+          <rect x="16" y="185" width="118" height="60" rx="10" fill="rgba(109,91,255,0.12)" stroke="rgba(109,91,255,0.2)" stroke-width="1"/>
+          <text x="75" y="205" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.6)">Выручка сегодня</text>
+          <text x="75" y="226" text-anchor="middle" font-size="16" fill="url(#pg2)" font-weight="700">280 450 ₸</text>
+          <defs><linearGradient id="pg2" x1="0" y1="0" x2="150" y2="0"><stop offset="0%" stop-color="#6D5BFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. EARN ── -->
+<section id="earn" class="section fade-in">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-badge" data-i18n="section_earn">Сколько можно заработать</div>
+      <h2 class="section-title" data-i18n="earn_title">Сколько можно заработать?</h2>
+      <p class="section-sub" style="margin:0 auto;" data-i18n="earn_sub">Пример расчета на основе средних показателей</p>
+    </div>
+    <div class="earn-grid">
+      <div class="earn-card">
+        <div class="earn-badge" data-i18n="earn_badge">Гача аппарат 4X Premium</div>
+        <div class="earn-row"><span class="earn-label" data-i18n="earn_invest">Инвестиции:</span><span class="earn-value">1 500 000 ₸</span></div>
+        <div class="earn-row"><span class="earn-label" data-i18n="earn_revenue">Средняя выручка:</span><span class="earn-value">350 000 ₸/мес</span></div>
+        <div class="earn-row"><span class="earn-label" data-i18n="earn_profit">Чистая прибыль:</span><span class="earn-value green">до 180 000 ₸/мес</span></div>
+        <div class="earn-row"><span class="earn-label" data-i18n="earn_roi">Окупаемость:</span><span class="earn-value">от 8 месяцев</span></div>
+        <a href="https://wa.me/77066881039" class="btn-primary" style="margin-top:20px;width:100%;justify-content:center;" data-i18n="earn_calc">Рассчитать для другого аппарата</a>
+      </div>
+      <div class="chart-wrap">
+        <div class="chart-title" data-i18n="chart_title">📈 Прогноз прибыли</div>
+        <svg id="profitChart" width="100%" viewBox="0 0 400 200" fill="none" style="overflow:visible;">
+          <defs>
+            <linearGradient id="lineGrad" x1="0" y1="0" x2="400" y2="0">
+              <stop offset="0%" stop-color="#6D5BFF"/>
+              <stop offset="100%" stop-color="#00D4FF"/>
+            </linearGradient>
+            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="200">
+              <stop offset="0%" stop-color="#6D5BFF" stop-opacity=".3"/>
+              <stop offset="100%" stop-color="#6D5BFF" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <!-- Grid -->
+          <line x1="40" y1="10" x2="40" y2="170" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+          <line x1="40" y1="10" x2="400" y2="10" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="40" y1="50" x2="400" y2="50" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="40" y1="90" x2="400" y2="90" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="40" y1="130" x2="400" y2="130" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="40" y1="170" x2="400" y2="170" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+          <!-- Y labels -->
+          <text x="35" y="14" text-anchor="end" font-size="9" fill="rgba(255,255,255,0.4)">300K</text>
+          <text x="35" y="54" text-anchor="end" font-size="9" fill="rgba(255,255,255,0.4)">225K</text>
+          <text x="35" y="94" text-anchor="end" font-size="9" fill="rgba(255,255,255,0.4)">150K</text>
+          <text x="35" y="134" text-anchor="end" font-size="9" fill="rgba(255,255,255,0.4)">75K</text>
+          <text x="35" y="174" text-anchor="end" font-size="9" fill="rgba(255,255,255,0.4)">0</text>
+          <!-- X labels -->
+          <text x="80" y="188" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.4)">1 мес</text>
+          <text x="152" y="188" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.4)">3 мес</text>
+          <text x="224" y="188" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.4)">6 мес</text>
+          <text x="296" y="188" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.4)">9 мес</text>
+          <text x="368" y="188" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.4)">12 мес</text>
+          <!-- Payback line -->
+          <line x1="40" y1="170" x2="320" y2="10" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="6,4"/>
+          <text x="270" y="50" font-size="8" fill="rgba(255,255,255,0.35)">окупаемость</text>
+          <!-- Area -->
+          <path id="chartArea" d="M80,160 L152,140 L224,110 L296,72 L368,28 L368,170 L80,170 Z" fill="url(#areaGrad)" opacity="0"/>
+          <!-- Line -->
+          <path id="chartLine" d="M80,160 L152,140 L224,110 L296,72 L368,28" stroke="url(#lineGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1000" stroke-dashoffset="1000"/>
+          <!-- Dots -->
+          <circle cx="80" cy="160" r="4" fill="url(#lineGrad)"/>
+          <circle cx="152" cy="140" r="4" fill="url(#lineGrad)"/>
+          <circle cx="224" cy="110" r="4" fill="url(#lineGrad)"/>
+          <circle cx="296" cy="72" r="4" fill="url(#lineGrad)"/>
+          <circle cx="368" cy="28" r="4" fill="url(#lineGrad)"/>
+          <!-- Value labels -->
+          <text x="80" y="154" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">60K</text>
+          <text x="152" y="134" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">90K</text>
+          <text x="224" y="104" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">140K</text>
+          <text x="296" y="66" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">200K</text>
+          <text x="368" y="22" text-anchor="middle" font-size="9" fill="rgba(0,212,255,0.9)" font-weight="700">180K/мес</text>
+        </svg>
+        <p style="font-size:12px;color:var(--text-muted);margin-top:8px;" data-i18n="chart_note">* Чистая прибыль в месяц. Данные усреднённые.</p>
+      </div>
+    </div>
+    <p class="earn-disclaimer" data-i18n="earn_disclaimer">Показатели зависят от локации и модели аппарата.</p>
+  </div>
+</section>
+
+<!-- ── 7. COUNTERS ── -->
+<section id="counters" class="section counters-section fade-in" style="padding:60px 0;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px;">
+      <h2 class="section-title" data-i18n="clients_title">Нам доверяют предприниматели по всему Казахстану</h2>
+    </div>
+    <div class="counters-grid">
+      <div class="counter-card">
+        <div class="counter-num" data-target="100" data-suffix="+">0+</div>
+        <div class="counter-label" data-i18n="c1_label">аппаратов установлено</div>
+      </div>
+      <div class="counter-card">
+        <div class="counter-num" data-target="50" data-suffix="+">0+</div>
+        <div class="counter-label" data-i18n="c2_label">довольных клиентов</div>
+      </div>
+      <div class="counter-card">
+        <div class="counter-num" data-target="1000000" data-suffix="+">0+</div>
+        <div class="counter-label" data-i18n="c3_label">успешных транзакций</div>
+      </div>
+      <div class="counter-card">
+        <div class="counter-num" style="-webkit-text-fill-color:transparent;" data-i18n="c4_num">24/7</div>
+        <div class="counter-label" data-i18n="c4_label">поддержка для каждого клиента</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 8. REVIEWS ── -->
+<section id="reviews" class="section fade-in" style="background:var(--section-dark);">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-badge" data-i18n="section_reviews">Отзывы партнёров</div>
+      <h2 class="section-title" data-i18n="reviews_title">Отзывы наших партнёров</h2>
+    </div>
+    <div class="slider-wrap">
+      <div class="slider-track" id="sliderTrack">
+        <div class="review-card">
+          <div class="review-place" data-i18n="r1_place">ТРЦ MEGA Alma-Ata</div>
+          <div class="review-city" data-i18n="r1_city">г. Алматы</div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text" data-i18n="r1_text">Установили 3 гача аппарата. За 6 месяцев вышли на стабильную прибыль. Команда StarThing сопровождала нас на каждом шагу — от выбора локации до первой продажи.</p>
+          <div class="review-profit">📈 <span data-i18n="r1_profit">Прибыль в месяц: 215 000 ₸</span></div>
+        </div>
+        <div class="review-card">
+          <div class="review-place" data-i18n="r2_place">Family Park</div>
+          <div class="review-city" data-i18n="r2_city">г. Астана</div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text" data-i18n="r2_text">Хватайка окупилась за 7 месяцев. Отличный поток клиентов. Дети в восторге, родители тоже! Kaspi QR очень удобен — больше никаких проблем со сдачей.</p>
+          <div class="review-profit">📈 <span data-i18n="r2_profit">Прибыль в месяц: 190 000 ₸</span></div>
+        </div>
+        <div class="review-card">
+          <div class="review-place" data-i18n="r3_place">Sport Life</div>
+          <div class="review-city" data-i18n="r3_city">г. Шымкент</div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text" data-i18n="r3_text">Протеиновый автомат работает отлично и пользуется спросом. Наши клиенты очень довольны удобством покупки прямо в зале. Рекомендуем StarThing!</p>
+          <div class="review-profit">📈 <span data-i18n="r3_profit">Прибыль в месяц: 160 000 ₸</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-arrows">
+      <button class="arrow-btn" onclick="slideLeft()">←</button>
+      <button class="arrow-btn" onclick="slideRight()">→</button>
+    </div>
+    <div class="reviews-cta">
+      <a href="https://wa.me/77066881039" class="btn-outline" data-i18n="reviews_all">Смотреть все отзывы →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── 9. FAQ ── -->
+<section id="faq" class="section fade-in">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-badge" data-i18n="section_faq">FAQ</div>
+      <h2 class="section-title" data-i18n="faq_title">Часто задаваемые вопросы</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq1_q">Нужен ли ИП для работы?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq1_a">Да, для ведения предпринимательской деятельности необходимо зарегистрировать ИП или ТОО. Мы можем проконсультировать по этому вопросу.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq2_q">Можно ли поставить аппарат в торговом центре?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq2_a">Да, большинство наших аппаратов успешно работают в ТРЦ. Мы также помогаем с переговорами об аренде торгового места.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq3_q">Есть ли гарантия?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq3_a">На всё оборудование предоставляется официальная гарантия 12 месяцев с полным сервисным обслуживанием.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq4_q">Как работает Kaspi QR?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq4_a">Клиент оплачивает товар через приложение Kaspi, а информация о продаже мгновенно поступает в систему StarThing. Деньги зачисляются на ваш счёт автоматически.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq5_q">Можно ли управлять аппаратом удалённо?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq5_a">Да, через мобильное приложение StarThing — из любой точки мира. Статистика, уведомления и управление доступны 24/7.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq6_q">Помогаете ли вы с установкой?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq6_a">Да, мы выполняем доставку, установку и полную настройку оборудования. Вам не нужно ничего делать самостоятельно.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 10. CTA ── -->
+<section id="cta" class="section">
+  <div class="dot-pattern" style="opacity:.12;"></div>
+  <div class="hero-orb" style="width:400px;height:400px;background:rgba(109,91,255,.3);top:-100px;left:-100px;"></div>
+  <div class="hero-orb" style="width:300px;height:300px;background:rgba(0,212,255,.2);bottom:-50px;right:-50px;"></div>
+  <div class="container">
+    <div class="cta-grid" style="position:relative;">
+      <div class="fade-in">
+        <h2 class="cta-title" data-i18n="cta_title">Готовы запустить свой вендинговый бизнес?</h2>
+        <p class="cta-sub" data-i18n="cta_sub">Оставьте заявку, и наши специалисты помогут подобрать оборудование, рассчитают окупаемость и подготовят индивидуальное коммерческое предложение.</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/77066881039" class="btn-primary" style="font-size:16px;" data-i18n="btn_offer">Получить предложение</a>
+          <a href="https://wa.me/77066881039" class="btn-outline" style="font-size:16px;" data-i18n="btn_whatsapp">📱 Написать в WhatsApp</a>
+        </div>
+      </div>
+      <div style="position:relative;height:300px;" class="fade-in" style="transition-delay:.2s">
+        <!-- Phone mock -->
+        <svg style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);" width="140" height="280" viewBox="0 0 140 280" fill="none">
+          <rect x="4" y="4" width="132" height="272" rx="24" fill="#0D1020" stroke="rgba(109,91,255,0.7)" stroke-width="2"/>
+          <rect x="12" y="16" width="116" height="248" rx="18" fill="#111827"/>
+          <rect x="45" y="8" width="50" height="7" rx="4" fill="#1a1a2e"/>
+          <text x="70" y="50" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="sans-serif" font-weight="700">StarThing</text>
+          <rect x="18" y="60" width="104" height="50" rx="10" fill="rgba(109,91,255,0.2)" stroke="rgba(109,91,255,0.3)" stroke-width="1"/>
+          <text x="70" y="80" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)">Выручка сегодня</text>
+          <text x="70" y="98" text-anchor="middle" font-size="16" fill="url(#ctag)" font-weight="800">47 000 ₸</text>
+          <defs><linearGradient id="ctag" x1="0" y1="0" x2="140" y2="0"><stop offset="0%" stop-color="#6D5BFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs>
+          <!-- Kaspi QR mock -->
+          <rect x="18" y="120" width="104" height="80" rx="10" fill="rgba(245,0,29,0.15)" stroke="rgba(245,0,29,0.3)" stroke-width="1"/>
+          <text x="70" y="145" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-weight="700">Kaspi QR</text>
+          <!-- QR pattern -->
+          <rect x="38" y="154" width="12" height="12" rx="2" fill="rgba(255,255,255,0.6)"/>
+          <rect x="52" y="154" width="4" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
+          <rect x="58" y="154" width="4" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
+          <rect x="64" y="154" width="8" height="8" rx="1" fill="rgba(255,255,255,0.5)"/>
+          <rect x="74" y="154" width="4" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
+          <rect x="80" y="154" width="12" height="12" rx="2" fill="rgba(255,255,255,0.6)"/>
+          <rect x="38" y="168" width="4" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
+          <rect x="44" y="168" width="8" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
+          <rect x="58" y="168" width="4" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
+          <rect x="64" y="168" width="4" height="8" rx="1" fill="rgba(255,255,255,0.5)"/>
+          <rect x="74" y="168" width="8" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
+          <rect x="84" y="168" width="4" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
+        </svg>
+        <!-- Notif 1 -->
+        <div class="notif-card notif-card-1">
+          <div class="notif-dot"></div>
+          <span data-i18n="notif1">✅ Новая продажа — 2 500 ₸</span>
+        </div>
+        <!-- Notif 2 -->
+        <div class="notif-card notif-card-2">
+          <div class="notif-dot" style="background:#6D5BFF;"></div>
+          <span data-i18n="notif2">📊 Выручка сегодня — 47 000 ₸</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="contacts">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo" style="margin-bottom:0;">
+          <img src="./img/logo.png" alt="" width="45px">
+          <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:20px;">StarThing</span>
+        </div>
+        <p class="footer-brand" data-i18n="footer_sub">Вендинговый бизнес под ключ в Казахстане. Запустите прибыльный бизнес с надёжным партнёром.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/starthingkz/" class="social-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/77066881039" class="social-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title" data-i18n="footer_catalog">Каталог</div>
+        <ul class="footer-links">
+          <li><a href="#catalog" data-i18n="cat_gacha_name">Гача аппараты</a></li>
+          <li><a href="#catalog" data-i18n="cat_claw_name">Хватайки</a></li>
+          <li><a href="#catalog" data-i18n="cat_protein_name">Протеиновые автоматы</a></li>
+          <li><a href="#catalog" data-i18n="cat_tshirt_name">Принтер футболок</a></li>
+          <li><a href="#catalog" data-i18n="cat_photo_name">Фото и документы</a></li>
+          <li><a href="#catalog" data-i18n="cat_massage_name">Массажные кресла</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title" data-i18n="footer_solutions">Решения</div>
+        <ul class="footer-links">
+          <li><a href="#how">Kaspi QR</a></li>
+          <li><a href="#app" data-i18n="section_app">Приложение StarThing</a></li>
+          <li><a href="#how" data-i18n="hero_badge">Готовый бизнес под ключ</a></li>
+          <li><a href="#earn" data-i18n="section_earn">Расчёт прибыли</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title" data-i18n="footer_contacts">Контакты</div>
+        <div class="footer-contact">📞 <a href="tel:+77066881039">+7 706 688 10 39</a></div>
+        <div class="footer-contact">✉ <a href="mailto:starthing.kz@gmail.com">starthing.kz@gmail.com</a></div>
+        <div class="footer-contact">📍 <span data-i18n="footer_addr">г. Алматы, ул. Саина 16а</span></div>
+        <a href="https://wa.me/77066881039" class="btn-primary" style="margin-top:16px;font-size:14px;padding:10px 20px;" data-i18n="btn_whatsapp">📱 Написать в WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer_copy">© 2024 StarThing Kazakhstan. Все права защищены.</span>
+      <span style="color:var(--primary);">StarThing Kazakhstan</span>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<script>
+// ── TRANSLATIONS ─────────────────────────────
+const translations = {
+  ru: {
+    nav_home:'Главная',nav_catalog:'Каталог',nav_app:'Приложение',nav_about:'О компании',nav_contacts:'Контакты',
+    hero_badge:'Вендинговый бизнес под ключ',
+    hero_title_1:'Запустите ',hero_title_grad:'прибыльный',hero_title_2:' вендинговый бизнес вместе со ',hero_title_brand:'StarThing',
+    hero_sub:'Мы не просто продаем аппараты. Мы запускаем готовый бизнес под ключ: подключаем Kaspi QR, настраиваем приложение StarThing, предоставляем гарантию 12 месяцев и сопровождаем вас на каждом этапе.',
+    btn_catalog:'Смотреть каталог →',btn_consult:'Получить консультацию',btn_offer:'Получить предложение',btn_whatsapp:'📱 Написать в WhatsApp',btn_view:'Смотреть',btn_all_cats:'Смотреть все категории',
+    badge_kaspi:'Подключение Kaspi QR',badge_app:'Управление через приложение',badge_warranty:'Гарантия 12 месяцев',
+    section_why:'Почему StarThing',why_title:'Всё необходимое для запуска бизнеса',why_sub:'Мы предоставляем полный пакет услуг для успешного старта и развития вашего вендингового бизнеса.',
+    f1_title:'Готовый бизнес под ключ',f1_desc:'Подбираем оборудование, помогаем с размещением и запускаем проект с нуля до первой прибыли.',
+    f2_title:'Подключение Kaspi QR',f2_desc:'Все аппараты работают с современной системой безналичной оплаты — удобно для клиентов.',
+    f3_title:'Управление через приложение',f3_desc:'Контролируйте бизнес из любой точки мира: статистика, выручка, остатки — всё в телефоне.',
+    f4_title:'Гарантия 12 месяцев',f4_desc:'Надёжная техническая поддержка и сервисное обслуживание в течение всего гарантийного срока.',
+    f5_title:'Монтаж и запуск',f5_desc:'Доставка, установка и полная настройка оборудования — вам остаётся только считать прибыль.',
+    f6_title:'Поддержка 24/7',f6_desc:'Всегда готовы помочь по любым вопросам — техническим, коммерческим или организационным.',
+    section_catalog:'Каталог вендинговых аппаратов',catalog_title:'Каталог вендинговых аппаратов',catalog_sub:'Выберите направление бизнеса',
+    f_all:'Все',f_gacha:'Гача',f_claw:'Хватайки',f_protein:'Протеиновые',f_tshirt:'Футболки',f_photo:'Фото и документы',f_massage:'Массаж',
+    cat_gacha_name:'Гача аппараты',cat_gacha_models:'6 моделей',cat_gacha_desc:'Популярное решение для ТРЦ, парков развлечений и семейных комплексов. Высокая проходимость, низкая стоимость наполнения.',
+    cat_claw_name:'Хватайки',cat_claw_models:'4 модели',cat_claw_desc:'Классические автоматы с игрушками, которые привлекают детей и взрослых. Claw Mini, Standard, XL и Mega.',
+    cat_protein_name:'Протеиновые автоматы',cat_protein_models:'2 модели',cat_protein_desc:'Идеально подходят для фитнес-клубов, спортивных центров и залов. Protein Basic и Protein Pro.',
+    cat_tshirt_name:'Принтер футболок',cat_tshirt_models:'1 модель',cat_tshirt_desc:'Печать принтов на футболках прямо на месте по заказу клиента. Уникальный аттракцион в ТРЦ.',
+    cat_photo_name:'Фото и документы',cat_photo_models:'1 модель',cat_photo_desc:'Автоматическая печать документов и фотографий без участия персонала. Востребовано везде.',
+    cat_massage_name:'Массажные кресла',cat_massage_models:'2 модели',cat_massage_desc:'Пассивный доход в ТРЦ, аэропортах и бизнес-центрах. Высокий средний чек и стабильный спрос.',
+    section_how:'Как мы запускаем ваш бизнес',how_title:'Как мы запускаем ваш бизнес',
+    step1_title:'Выбираете аппарат',step1_desc:'Наши специалисты помогают подобрать модель под цели и бюджет.',
+    step2_title:'Заключаем договор',step2_desc:'Согласовываем комплектацию и условия поставки.',
+    step3_title:'Подключаем Kaspi QR',step3_desc:'Настраиваем приём платежей — быстро и без сложностей.',
+    step4_title:'Подключаем приложение',step4_desc:'Получаете полный контроль над оборудованием онлайн.',
+    step5_title:'Начинаете зарабатывать',step5_desc:'Следите за показателями и получайте прибыль каждый день.',
+    section_app:'Мобильное приложение',app_title_grad:'любой точки',app_title_2:'мира',
+    app_f1:'Онлайн статистика продаж',app_f2:'Контроль выручки в реальном времени',app_f3:'Мониторинг остатков товаров',app_f4:'Уведомления о событиях',app_f5:'Управление несколькими аппаратами',app_f6:'Аналитика и отчёты',app_f7:'Контроль работы оборудования',app_f8:'История операций',
+    store_dl:'Загрузить в',store_avail:'Доступно в',app_month:'за месяц',
+    section_earn:'Сколько можно заработать',earn_title:'Сколько можно заработать?',earn_sub:'Пример расчета на основе средних показателей',
+    earn_badge:'Гача аппарат 4X Premium',earn_invest:'Инвестиции:',earn_revenue:'Средняя выручка:',earn_profit:'Чистая прибыль:',earn_roi:'Окупаемость:',earn_calc:'Рассчитать для другого аппарата',
+    chart_title:'📈 Прогноз прибыли',chart_note:'* Чистая прибыль в месяц. Данные усреднённые.',earn_disclaimer:'Показатели зависят от локации и модели аппарата.',
+    clients_title:'Нам доверяют предприниматели по всему Казахстану',
+    c1_label:'аппаратов установлено',c2_label:'довольных клиентов',c3_label:'успешных транзакций',c4_num:'24/7',c4_label:'поддержка для каждого клиента',
+    section_reviews:'Отзывы партнёров',reviews_title:'Отзывы наших партнёров',
+    r1_place:'ТРЦ MEGA Alma-Ata',r1_city:'г. Алматы',r1_text:'Установили 3 гача аппарата. За 6 месяцев вышли на стабильную прибыль. Команда StarThing сопровождала нас на каждом шагу — от выбора локации до первой продажи.',r1_profit:'Прибыль в месяц: 215 000 ₸',
+    r2_place:'Family Park',r2_city:'г. Астана',r2_text:'Хватайка окупилась за 7 месяцев. Отличный поток клиентов. Дети в восторге, родители тоже! Kaspi QR очень удобен — больше никаких проблем со сдачей.',r2_profit:'Прибыль в месяц: 190 000 ₸',
+    r3_place:'Sport Life',r3_city:'г. Шымкент',r3_text:'Протеиновый автомат работает отлично и пользуется спросом. Наши клиенты очень довольны удобством покупки прямо в зале. Рекомендуем StarThing!',r3_profit:'Прибыль в месяц: 160 000 ₸',
+    reviews_all:'Смотреть все отзывы →',
+    section_faq:'FAQ',faq_title:'Часто задаваемые вопросы',
+    faq1_q:'Нужен ли ИП для работы?',faq1_a:'Да, для ведения предпринимательской деятельности необходимо зарегистрировать ИП или ТОО. Мы можем проконсультировать по этому вопросу.',
+    faq2_q:'Можно ли поставить аппарат в торговом центре?',faq2_a:'Да, большинство наших аппаратов успешно работают в ТРЦ. Мы также помогаем с переговорами об аренде торгового места.',
+    faq3_q:'Есть ли гарантия?',faq3_a:'На всё оборудование предоставляется официальная гарантия 12 месяцев с полным сервисным обслуживанием.',
+    faq4_q:'Как работает Kaspi QR?',faq4_a:'Клиент оплачивает товар через приложение Kaspi, а информация о продаже мгновенно поступает в систему StarThing. Деньги зачисляются на ваш счёт автоматически.',
+    faq5_q:'Можно ли управлять аппаратом удалённо?',faq5_a:'Да, через мобильное приложение StarThing — из любой точки мира. Статистика, уведомления и управление доступны 24/7.',
+    faq6_q:'Помогаете ли вы с установкой?',faq6_a:'Да, мы выполняем доставку, установку и полную настройку оборудования. Вам не нужно ничего делать самостоятельно.',
+    cta_title:'Готовы запустить свой вендинговый бизнес?',cta_sub:'Оставьте заявку, и наши специалисты помогут подобрать оборудование, рассчитают окупаемость и подготовят индивидуальное коммерческое предложение.',
+    notif1:'✅ Новая продажа — 2 500 ₸',notif2:'📊 Выручка сегодня — 47 000 ₸',
+    footer_sub:'Вендинговый бизнес под ключ в Казахстане. Запустите прибыльный бизнес с надёжным партнёром.',
+    footer_catalog:'Каталог',footer_solutions:'Решения',footer_contacts:'Контакты',footer_addr:'Алматы, Казахстан',
+    footer_copy:'© 2024 StarThing Kazakhstan. Все права защищены.'
+  },
+  kz: {
+    nav_home:'Басты бет',nav_catalog:'Каталог',nav_app:'Қолданба',nav_about:'Компания туралы',nav_contacts:'Байланыс',
+    hero_badge:'Кілтке дейін вендинг бизнесі',
+    hero_title_1:'',hero_title_grad:'Табысты',hero_title_2:' вендинг бизнесін StarThing-пен бірге іске қосыңыз ',hero_title_brand:'',
+    hero_sub:'Біз жай аппараттар сатпаймыз. Дайын бизнесті кілтке дейін іске қосамыз: Kaspi QR қосамыз, StarThing қолданбасын баптаймыз, 12 ай кепілдік береміз және сізді әрбір кезеңде сүйемелдейміз.',
+    btn_catalog:'Каталогты көру →',btn_consult:'Кеңес алу',btn_offer:'Ұсыныс алу',btn_whatsapp:'📱 WhatsApp-қа жазу',btn_view:'Көру',btn_all_cats:'Барлық санаттарды көру',
+    badge_kaspi:'Kaspi QR қосылымы',badge_app:'Қолданба арқылы басқару',badge_warranty:'12 ай кепілдік',
+    section_why:'Неліктен StarThing',why_title:'Бизнес бастауға қажеттінің бәрі',why_sub:'Вендинг бизнесіңіздің сәтті басталуы мен дамуы үшін толық қызмет пакетін ұсынамыз.',
+    f1_title:'Кілтке дейін дайын бизнес',f1_desc:'Жабдықты іріктейміз, орналастыруға көмектесеміз және жобаны нөлден бірінші пайдаға дейін іске қосамыз.',
+    f2_title:'Kaspi QR қосылымы',f2_desc:'Барлық аппараттар заманауи қолма-қол ақшасыз төлем жүйесімен жұмыс істейді.',
+    f3_title:'Қолданба арқылы басқару',f3_desc:'Бизнесіңізді дүниенің кез келген нүктесінен бақылаңыз: статистика, түсім, қалдықтар.',
+    f4_title:'12 ай кепілдік',f4_desc:'Кепілдік мерзімі ішінде сенімді техникалық қолдау және сервистік қызмет көрсету.',
+    f5_title:'Монтаж және іске қосу',f5_desc:'Жеткізу, орнату және жабдықты толық баптау — сізге тек пайданы санау қалады.',
+    f6_title:'24/7 қолдау',f6_desc:'Кез келген мәселе бойынша — техникалық, коммерциялық немесе ұйымдастырушылық — әрқашан көмекке дайынбыз.',
+    section_catalog:'Вендинг аппараттарының каталогы',catalog_title:'Вендинг аппараттарының каталогы',catalog_sub:'Бизнес бағытыңызды таңдаңыз',
+    f_all:'Барлығы',f_gacha:'Гача',f_claw:'Хватайки',f_protein:'Протеиндік',f_tshirt:'Футболкалар',f_photo:'Фото және құжаттар',f_massage:'Массаж',
+    cat_gacha_name:'Гача аппараттары',cat_gacha_models:'6 модель',cat_gacha_desc:'ТРЦ, ойын-сауық парктері және отбасылық кешендер үшін танымал шешім.',
+    cat_claw_name:'Хватайки',cat_claw_models:'4 модель',cat_claw_desc:'Балалар мен ересектерді тартатын ойыншықты классикалық автоматтар.',
+    cat_protein_name:'Протеиндік автоматтар',cat_protein_models:'2 модель',cat_protein_desc:'Фитнес-клубтар, спорт орталықтары мен залдар үшін өте қолайлы.',
+    cat_tshirt_name:'Футболка принтері',cat_tshirt_models:'1 модель',cat_tshirt_desc:'Тапсырыс бойынша футболкаларға тікелей орында принт басу.',
+    cat_photo_name:'Фото және құжаттар',cat_photo_models:'1 модель',cat_photo_desc:'Персоналсыз құжаттар мен фотоларды автоматты басып шығару.',
+    cat_massage_name:'Массаж креслолары',cat_massage_models:'2 модель',cat_massage_desc:'ТРЦ, әуежайлар мен бизнес-орталықтардағы пассивті табыс.',
+    section_how:'Бизнесті қалай іске қосамыз',how_title:'Бизнесіңізді қалай іске қосамыз',
+    step1_title:'Аппарат таңдайсыз',step1_desc:'Мамандарымыз мақсатқа және бюджетке сай модель таңдауға көмектеседі.',
+    step2_title:'Шарт жасасамыз',step2_desc:'Жинақтауды және жеткізу шарттарын келісеміз.',
+    step3_title:'Kaspi QR қосамыз',step3_desc:'Төлемдерді қабылдауды баптаймыз — жылдам және қарапайым.',
+    step4_title:'Қолданбаны қосамыз',step4_desc:'Жабдықты онлайн толық бақылауға аласыз.',
+    step5_title:'Табыс табуды бастайсыз',step5_desc:'Көрсеткіштерді бақылаңыз және күн сайын пайда алыңыз.',
+    section_app:'Мобильді қолданба',app_title_grad:'кез келген нүктеден',app_title_2:'',
+    app_f1:'Сатылымның онлайн статистикасы',app_f2:'Нақты уақытта түсімді бақылау',app_f3:'Тауар қалдықтарын бақылау',app_f4:'Оқиғалар туралы хабарландырулар',app_f5:'Бірнеше аппаратты басқару',app_f6:'Аналитика және есептер',app_f7:'Жабдық жұмысын бақылау',app_f8:'Операциялар тарихы',
+    store_dl:'Жүктеу',store_avail:'Қолжетімді',app_month:'айдың ішінде',
+    section_earn:'Қанша табуға болады',earn_title:'Қанша табуға болады?',earn_sub:'Орташа көрсеткіштер негізіндегі есептеу мысалы',
+    earn_badge:'Гача аппарат 4X Premium',earn_invest:'Инвестициялар:',earn_revenue:'Орташа түсім:',earn_profit:'Таза пайда:',earn_roi:'Өтелімділік:',earn_calc:'Басқа аппарат үшін есептеу',
+    chart_title:'📈 Пайда болжамы',chart_note:'* Айына таза пайда. Деректер орташаланған.',earn_disclaimer:'Көрсеткіштер орналасқан жерге және аппарат моделіне байланысты.',
+    clients_title:'Бізге бүкіл Қазақстандағы кәсіпкерлер сенеді',
+    c1_label:'аппарат орнатылды',c2_label:'риза клиенттер',c3_label:'сәтті транзакциялар',c4_num:'24/7',c4_label:'әр клиентке қолдау',
+    section_reviews:'Серіктестердің пікірлері',reviews_title:'Серіктестеріміздің пікірлері',
+    r1_place:'ТРЦ MEGA Alma-Ata',r1_city:'Алматы қ.',r1_text:'3 гача аппарат орнаттық. 6 ай ішінде тұрақты пайдаға шықтық. StarThing командасы бізді әр қадамда сүйемелдеді.',r1_profit:'Айына пайда: 215 000 ₸',
+    r2_place:'Family Park',r2_city:'Астана қ.',r2_text:'Хватайка 7 ай ішінде өтелді. Тамаша клиент ағыны. Балалар да, ата-аналар да қуанышты! Kaspi QR өте ыңғайлы.',r2_profit:'Айына пайда: 190 000 ₸',
+    r3_place:'Sport Life',r3_city:'Шымкент қ.',r3_text:'Протеиндік автомат тамаша жұмыс істейді және сұранысқа ие. Клиенттеріміз залда тікелей сатып алудың ыңғайлылығына өте риза.',r3_profit:'Айына пайда: 160 000 ₸',
+    reviews_all:'Барлық пікірлерді көру →',
+    section_faq:'ЖҚС',faq_title:'Жиі қойылатын сұрақтар',
+    faq1_q:'Жұмыс үшін ЖК қажет пе?',faq1_a:'Иә, кәсіпкерлік қызметті жүргізу үшін ЖК немесе ЖШС тіркеу қажет. Біз бұл мәселе бойынша кеңес бере аламыз.',
+    faq2_q:'Аппаратты сауда орталығына қоюға болады ма?',faq2_a:'Иә, аппараттарымыздың көпшілігі ТРЦ-да сәтті жұмыс істейді. Жалдау келіссөздерінде де көмектесеміз.',
+    faq3_q:'Кепілдік бар ма?',faq3_a:'Барлық жабдыққа толық сервистік қызмет көрсетумен 12 айлық ресми кепілдік беріледі.',
+    faq4_q:'Kaspi QR қалай жұмыс істейді?',faq4_a:'Клиент Kaspi қолданбасы арқылы тауар үшін төлейді, ал сату туралы ақпарат StarThing жүйесіне бірден келіп түседі.',
+    faq5_q:'Аппаратты қашықтан басқаруға болады ма?',faq5_a:'Иә, StarThing мобильді қолданбасы арқылы — дүниенің кез келген нүктесінен. Статистика, хабарландырулар және басқару 24/7 қолжетімді.',
+    faq6_q:'Орнатуға көмектесесіздер ме?',faq6_a:'Иә, жеткізуді, орнатуды және жабдықты толық баптауды жүзеге асырамыз.',
+    cta_title:'Вендинг бизнесіңізді іске қосуға дайынсыз ба?',cta_sub:'Өтінім қалдырыңыз, мамандарымыз жабдықты таңдауға, өтелімділікті есептеуге және жеке коммерциялық ұсыныс дайындауға көмектеседі.',
+    notif1:'✅ Жаңа сату — 2 500 ₸',notif2:'📊 Бүгінгі түсім — 47 000 ₸',
+    footer_sub:'Қазақстандағы кілтке дейін вендинг бизнесі. Сенімді серіктеспен табысты бизнес іске қосыңыз.',
+    footer_catalog:'Каталог',footer_solutions:'Шешімдер',footer_contacts:'Байланыс',footer_addr:'Алматы, Қазақстан',
+    footer_copy:'© 2024 StarThing Kazakhstan. Барлық құқықтар қорғалған.'
+  },
+  en: {
+    nav_home:'Home',nav_catalog:'Catalog',nav_app:'App',nav_about:'About',nav_contacts:'Contacts',
+    hero_badge:'Turnkey vending business',
+    hero_title_1:'Launch a ',hero_title_grad:'profitable',hero_title_2:' vending business with ',hero_title_brand:'StarThing',
+    hero_sub:"We don't just sell machines. We launch a ready-made turnkey business: connect Kaspi QR, set up the StarThing app, provide a 12-month warranty, and support you at every step.",
+    btn_catalog:'View catalog →',btn_consult:'Get a consultation',btn_offer:'Get an offer',btn_whatsapp:'📱 Write on WhatsApp',btn_view:'View',btn_all_cats:'View all categories',
+    badge_kaspi:'Kaspi QR connection',badge_app:'App management',badge_warranty:'12-month warranty',
+    section_why:'Why StarThing',why_title:'Everything you need to launch your business',why_sub:'We provide a complete package of services for a successful start and growth of your vending business.',
+    f1_title:'Turnkey business',f1_desc:'We select equipment, help with placement, and launch the project from zero to first profit.',
+    f2_title:'Kaspi QR connection',f2_desc:'All machines work with the modern cashless payment system — convenient for customers.',
+    f3_title:'App management',f3_desc:'Control your business from anywhere: statistics, revenue, stock — all in your phone.',
+    f4_title:'12-month warranty',f4_desc:'Reliable technical support and service throughout the entire warranty period.',
+    f5_title:'Installation & launch',f5_desc:'Delivery, installation, and full setup of equipment — you just count the profit.',
+    f6_title:'24/7 support',f6_desc:'Always ready to help with any questions — technical, commercial, or organizational.',
+    section_catalog:'Vending machine catalog',catalog_title:'Vending machine catalog',catalog_sub:'Choose your business direction',
+    f_all:'All',f_gacha:'Gacha',f_claw:'Claw',f_protein:'Protein',f_tshirt:'T-shirts',f_photo:'Photo & docs',f_massage:'Massage',
+    cat_gacha_name:'Gacha machines',cat_gacha_models:'6 models',cat_gacha_desc:'Popular solution for malls, amusement parks, and family centers. High traffic, low fill cost.',
+    cat_claw_name:'Claw machines',cat_claw_models:'4 models',cat_claw_desc:'Classic toy machines that attract children and adults. Claw Mini, Standard, XL, and Mega.',
+    cat_protein_name:'Protein dispensers',cat_protein_models:'2 models',cat_protein_desc:'Perfect for gyms, sports centers, and fitness halls. Protein Basic and Protein Pro.',
+    cat_tshirt_name:'T-shirt printer',cat_tshirt_models:'1 model',cat_tshirt_desc:'Print custom designs on T-shirts on demand right at the location.',
+    cat_photo_name:'Photo & documents',cat_photo_models:'1 model',cat_photo_desc:'Automatic printing of documents and photos without staff. In demand everywhere.',
+    cat_massage_name:'Massage chairs',cat_massage_models:'2 models',cat_massage_desc:'Passive income in malls, airports, and business centers. High average check.',
+    section_how:'How we launch your business',how_title:'How we launch your business',
+    step1_title:'Choose a machine',step1_desc:'Our specialists help select the model for your goals and budget.',
+    step2_title:'Sign contract',step2_desc:'We agree on configuration and delivery terms.',
+    step3_title:'Connect Kaspi QR',step3_desc:'Set up payment acceptance — fast and hassle-free.',
+    step4_title:'Connect the app',step4_desc:'Get full control over your equipment online.',
+    step5_title:'Start earning',step5_desc:'Track metrics and receive profit every day.',
+    section_app:'Mobile app',app_title_grad:'anywhere',app_title_2:'in the world',
+    app_f1:'Online sales statistics',app_f2:'Real-time revenue tracking',app_f3:'Stock monitoring',app_f4:'Event notifications',app_f5:'Multi-machine management',app_f6:'Analytics and reports',app_f7:'Equipment health monitoring',app_f8:'Transaction history',
+    store_dl:'Download on',store_avail:'Get it on',app_month:'per month',
+    section_earn:'Earnings potential',earn_title:'How much can you earn?',earn_sub:'Sample calculation based on average metrics',
+    earn_badge:'Gacha 4X Premium machine',earn_invest:'Investment:',earn_revenue:'Average revenue:',earn_profit:'Net profit:',earn_roi:'Payback period:',earn_calc:'Calculate for another machine',
+    chart_title:'📈 Profit forecast',chart_note:'* Net monthly profit. Average data.',earn_disclaimer:'Metrics depend on location and machine model.',
+    clients_title:'Trusted by entrepreneurs across Kazakhstan',
+    c1_label:'machines installed',c2_label:'happy clients',c3_label:'successful transactions',c4_num:'24/7',c4_label:'support for every client',
+    section_reviews:'Partner reviews',reviews_title:'What our partners say',
+    r1_place:'MEGA Alma-Ata Mall',r1_city:'Almaty',r1_text:'Installed 3 gacha machines. Reached stable profit within 6 months. The StarThing team accompanied us at every step — from choosing a location to the first sale.',r1_profit:'Monthly profit: 215,000 ₸',
+    r2_place:'Family Park',r2_city:'Astana',r2_text:'The claw machine paid back in 7 months. Excellent customer flow. Kids love it, parents too! Kaspi QR is very convenient — no more change problems.',r2_profit:'Monthly profit: 190,000 ₸',
+    r3_place:'Sport Life',r3_city:'Shymkent',r3_text:'The protein dispenser works great and is in high demand. Our customers love buying right in the gym. We recommend StarThing!',r3_profit:'Monthly profit: 160,000 ₸',
+    reviews_all:'View all reviews →',
+    section_faq:'FAQ',faq_title:'Frequently asked questions',
+    faq1_q:'Do I need a sole proprietorship?',faq1_a:'Yes, to run a business you need to register as a sole proprietor or LLC. We can advise on this.',
+    faq2_q:'Can I place a machine in a mall?',faq2_a:'Yes, most of our machines work successfully in shopping malls. We also help with lease negotiations.',
+    faq3_q:'Is there a warranty?',faq3_a:'All equipment comes with an official 12-month warranty with full service support.',
+    faq4_q:'How does Kaspi QR work?',faq4_a:'Customers pay via the Kaspi app, and sale info instantly appears in your StarThing system. Funds are credited automatically.',
+    faq5_q:'Can I manage machines remotely?',faq5_a:'Yes, via the StarThing mobile app — from anywhere in the world. Stats, notifications, and management available 24/7.',
+    faq6_q:'Do you help with installation?',faq6_a:'Yes, we handle delivery, installation, and full setup. You don\'t need to do anything yourself.',
+    cta_title:'Ready to launch your vending business?',cta_sub:'Leave a request and our specialists will help select equipment, calculate payback, and prepare a personalized commercial offer.',
+    notif1:'✅ New sale — 2,500 ₸',notif2:'📊 Revenue today — 47,000 ₸',
+    footer_sub:'Turnkey vending business in Kazakhstan. Launch a profitable business with a reliable partner.',
+    footer_catalog:'Catalog',footer_solutions:'Solutions',footer_contacts:'Contacts',footer_addr:'Almaty, Kazakhstan',
+    footer_copy:'© 2024 StarThing Kazakhstan. All rights reserved.'
+  }
+};
+
+let currentLang = localStorage.getItem('lang') || 'ru';
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  const t = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+  });
+}
+
+// ── THEME ─────────────────────────────
+function toggleTheme() {
+  const html = document.documentElement;
+  const isLight = html.classList.toggle('light');
+  html.classList.toggle('dark', !isLight);
+  document.getElementById('themeBtn').textContent = isLight ? '☀️' : '🌙';
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+}
+
+// ── BURGER ─────────────────────────────
+function toggleBurger() {
+  document.getElementById('burger').classList.toggle('open');
+  document.getElementById('mobile-nav').classList.toggle('open');
+}
+function closeBurger() {
+  document.getElementById('burger').classList.remove('open');
+  document.getElementById('mobile-nav').classList.remove('open');
+}
+
+// ── NAVBAR SCROLL ─────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ── FADE IN ─────────────────────────────
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObserver.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+// ── COUNTERS ─────────────────────────────
+function countUp(el, target, suffix = '') {
+  const duration = 1800;
+  const start = performance.now();
+  function frame(ts) {
+    const prog = Math.min((ts - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - prog, 3);
+    const val = Math.round(ease * target);
+    el.textContent = (val >= 1000 ? (val >= 1000000 ? (val/1000000).toFixed(1)+'M' : val.toLocaleString('ru')) : val) + suffix;
+    if (prog < 1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target;
+      const target = parseInt(el.getAttribute('data-target'));
+      const suffix = el.getAttribute('data-suffix') || '';
+      if (target) countUp(el, target, suffix);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+
+// ── FAQ ─────────────────────────────
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const wasActive = item.classList.contains('active');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+  if (!wasActive) item.classList.add('active');
+}
+
+// ── CATALOG FILTER ─────────────────────────────
+function filterCatalog(cat) {
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('#catalogGrid .cat-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.getAttribute('data-category') === cat) ? '' : 'none';
+  });
+}
+
+// ── SLIDER ─────────────────────────────
+function slideLeft() {
+  const t = document.getElementById('sliderTrack');
+  t.scrollBy({ left: -380, behavior: 'smooth' });
+}
+function slideRight() {
+  const t = document.getElementById('sliderTrack');
+  t.scrollBy({ left: 380, behavior: 'smooth' });
+}
+
+// ── PARALLAX ─────────────────────────────
+document.addEventListener('mousemove', (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 30;
+  const y = (e.clientY / window.innerHeight - 0.5) * 30;
+  const o1 = document.getElementById('orb1');
+  const o2 = document.getElementById('orb2');
+  if (o1) o1.style.transform = `translate(${x}px, ${y}px)`;
+  if (o2) o2.style.transform = `translate(${-x}px, ${-y}px)`;
+});
+
+// ── CHART ANIMATION ─────────────────────────────
+const chartObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const line = document.getElementById('chartLine');
+      const area = document.getElementById('chartArea');
+      if (line) {
+        line.style.transition = 'stroke-dashoffset 1.5s ease';
+        line.style.strokeDashoffset = '0';
+      }
+      if (area) { area.style.transition = 'opacity 1.5s ease 0.5s'; area.style.opacity = '1'; }
+      chartObserver.disconnect();
+    }
+  });
+}, { threshold: 0.3 });
+const earnSection = document.getElementById('earn');
+if (earnSection) chartObserver.observe(earnSection);
+
+// ── SMOOTH SCROLL ─────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+
+// ── INIT ─────────────────────────────
+(function init() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'light') {
+    document.documentElement.classList.add('light');
+    document.documentElement.classList.remove('dark');
+    document.getElementById('themeBtn').textContent = '☀️';
+  }
+  setLang(currentLang);
+})();
+</script>
+</body>
+</html>
+ponses.
+
+
